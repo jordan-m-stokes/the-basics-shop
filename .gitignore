@@ -37,3 +37,6 @@ yarn-debug.log*
 
 .DS_Store
 .env
+
+# backend
+/backend/node_modules
