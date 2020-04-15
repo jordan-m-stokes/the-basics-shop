@@ -1,0 +1,116 @@
+
+@import 'variables';
+
+@use 'base';
+
+header {
+    text-align: center;
+    margin: 50px 0;
+    
+    h1 {
+        font-size: 26px;
+    }
+}
+
+.section-main {
+    margin: 0 60px;
+    text-align: center;
+
+    p {
+        margin: 25px;
+    }
+
+    .field {
+        margin: 30px;
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea,
+        .money-input {
+            background: $color-negative;
+            color: $color-text-negative;
+            border: 3px solid $color-negative-contrast;
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 250px;
+            height: 100px;
+            text-align: left;
+        }
+
+        .money-input input {
+            padding: 0;
+            border: none;
+            border-radius: none;
+            margin-right: 10px;
+            width: 125px;
+        }
+
+        .money-input {
+            display: inline-block;
+        }
+    }
+
+    .actions {
+        input {
+            background: $color-negative;
+            color: $color-text-negative;
+            border: 3px solid $color-negative-contrast;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 15px;
+        }
+    }
+
+    table {
+        background: $color-negative;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        display: inline-block;
+
+        thead {
+
+            tr {
+                th {
+                    background: $color-negative;
+                    color: $color-text-negative;
+
+                    text-align: center;
+                    padding: 10px 15px;
+                }
+            }
+        }
+
+        tbody {
+            text-align: left;
+
+            td {
+                background: $color-contrast;
+                padding: 12px 18px;
+                margin: 0;
+
+                a {
+                    background: $color-contrast;
+                }
+            }
+        }
+
+        .th-name,
+        .td-name {
+            max-width: 120px;
+        }
+
+        .th-description,
+        .td-description {
+            max-width: 400px;
+        }
+    }
+}
