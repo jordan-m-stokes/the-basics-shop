@@ -1,0 +1,18 @@
+
+.backing {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -2;
+    max-width: 100%;
+}
+
+.backing-gradient {
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 56.25vw;
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(rgba(#fff, 0), rgba(#fff, 1) 60%);
+}

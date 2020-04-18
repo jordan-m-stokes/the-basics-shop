@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+body {
+}
+
+app-header,
+app-gallery {
+    display: block;
+}
+
+app-header {
+    margin-bottom: 75px;
+}
