@@ -1,18 +1,44 @@
 
+$down-to-gallery-x-scale: 2.0;
+$hover-scale: 2.3;
+
 .backing {
     left: 0;
     top: 0;
     position: absolute;
+    width: 100vw;
+    height: 58.5vw;
+    display: block;
+    z-index: -3;
+    background: #555;
+}
+
+.backing video {
+    width: 100vw;
     z-index: -2;
-    max-width: 100%;
+    filter: blur(15px);
 }
 
 .backing-gradient {
     left: 0;
     top: 0;
     width: 100vw;
-    height: 56.25vw;
+    height: 58.5vw;
     position: absolute;
     z-index: -1;
-    background-image: linear-gradient(rgba(#fff, 0), rgba(#fff, 1) 60%);
+    background: linear-gradient(rgba(#fff, 0) 55%, rgba(#fff, 1) 55%), rgba(#fff, 0.2);
+}
+
+.down-to-gallery {
+    display: inline-block;
+    color: rgba(#fff, 0.6);
+    font-size: 1.9vw;
+    transform: scaleX($down-to-gallery-x-scale);
+    user-select: none;
+    transition: transform 250ms, color 200ms;
+}
+
+.down-to-gallery:hover {
+    transform: scale($down-to-gallery-x-scale * $hover-scale, 1.3);
+    color: rgba(#fff, 0.15);
 }

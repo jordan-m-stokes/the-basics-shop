@@ -4,14 +4,20 @@
     text-align: center;
 }
 
-body {
-}
-
 app-header,
 app-gallery {
     display: block;
 }
 
 app-header {
-    margin-bottom: 75px;
+    background: rgba(#111, 0.4);
+    padding: 4vw 0;
+    width: 40%;
+    margin: 7.5vw auto 4.25vw;
+    border: 0.2vw solid rgba(#fff, 0.85);
+    border-radius: 25px;
+}
+
+app-gallery {
+    margin-top: 10vw;
 }
