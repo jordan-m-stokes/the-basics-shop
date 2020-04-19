@@ -1,0 +1,26 @@
+
+@import '../../styles/variables';
+
+.header {
+    background: $color-background;
+    width: 90%;
+    margin: 30px auto 60px;
+    padding-top: 10px;
+    border-radius: 18px;
+
+    .heading {
+        color: $color-text;
+        font-size: 32px;
+        padding-bottom: 40px;
+    }
+    
+    .sub-heading {
+        color: $color-text-muted;
+        padding: 0 30px 30px;
+        font-size: 18px;
+    }
+}
+
+.products {
+    padding-top: 100px;
+}

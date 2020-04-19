@@ -6,5 +6,5 @@
 </div>
 <div class="backing-gradient"></div>
 <app-header></app-header>
-<span class="down-to-gallery">v</span>
-<app-gallery id="gallery"></app-gallery>
+<span (click)="click($event)"class="down-to-gallery">v</span>
+<app-gallery id="gallery" #gallery></app-gallery>
