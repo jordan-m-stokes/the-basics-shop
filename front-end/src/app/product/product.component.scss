@@ -6,7 +6,8 @@
     border-radius: 15px;
     min-height: 200px;
     max-height: 350px;
-    max-width: 375px;
+    border: 2px solid $color-background-secondary;
+    border-bottom: 4px solid $color-background-secondary;
 }
 
 .card-body {
@@ -15,15 +16,14 @@
     background: $color-product-card;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
-    border: 1px solid $color-background;
 
     .heading {
         display: inline-block;
         margin: 15px 0 0;
         color: $color-text-strong;
-        font-size: 19.5px;
-        background: rgba($color-background, 0.75);
-        padding: 15px 65px 18px;
+        font-size: 17px;
+        background: rgba($color-background, 0.685);
+        padding: 14px 11% 17px;
         border-radius: 10px;
     }
 
@@ -44,5 +44,19 @@
             font-size: 20px;
             font-weight: 900;
         }
+    }
+}
+
+@media(min-width: 601px) {
+    
+    .thumbnail {
+        max-width: 296px;
+    }
+}
+
+@media(max-width: 600px) {
+    
+    .thumbnail {
+        width: 271px;
     }
 }

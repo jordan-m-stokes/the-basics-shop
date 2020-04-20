@@ -30,14 +30,13 @@ $hover-scale: 2.3;
 .down-to-gallery {
     display: inline-block;
     color: rgba(#fff, 0.6);
-    font-size: 1.9vw;
     transform: scaleX($down-to-gallery-x-scale);
     user-select: none;
-    transition: transform 250ms, color 200ms;
+    transition: transform 300ms, color 250ms;
 }
 
 .down-to-gallery:hover {
-    transform: scale($down-to-gallery-x-scale * $hover-scale, 1.3);
+    transform: scale($down-to-gallery-x-scale * $hover-scale, 1.4);
     color: rgba(#fff, 0.15);
 }
 
@@ -51,6 +50,10 @@ $hover-scale: 2.3;
 
     .backing video {
         filter: blur(12px);
+    }
+
+    .down-to-gallery {
+        font-size: 1.9vw;
     }
 }
 
@@ -72,5 +75,10 @@ $hover-scale: 2.3;
         top: 0;
         left: -15%;
         transform: scale(1.6);
+    }
+
+    
+    .down-to-gallery {
+        font-size: 30px;
     }
 }

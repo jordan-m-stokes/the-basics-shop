@@ -3,24 +3,59 @@
 
 .header {
     background: $color-background;
-    width: 90%;
     margin: 30px auto 60px;
     padding-top: 10px;
     border-radius: 18px;
 
     .heading {
         color: $color-text;
-        font-size: 32px;
-        padding-bottom: 40px;
     }
     
     .sub-heading {
         color: $color-text-muted;
         padding: 0 30px 30px;
-        font-size: 18px;
     }
 }
 
-.products {
-    padding-top: 100px;
+
+
+@media(min-width: 1001px) {
+    
+    .header {
+        width: 90%;
+
+        .heading {
+            font-size: 27px;
+            padding-bottom: 40px;
+        }
+        
+        .sub-heading {
+            font-size: 16px;
+        }
+    }
+
+    .products {
+        padding-top: 100px;
+    }
+}
+
+@media(max-width: 1000px) {
+    
+    .header {
+        width: 70%;
+        min-width: 325px;
+
+        .heading {
+            font-size: 18px;
+            padding: 12px 0 16px;
+        }
+        
+        .sub-heading {
+            font-size: 11px;
+        }
+    }
+
+    .products {
+        padding-bottom: 50px;
+    }
 }

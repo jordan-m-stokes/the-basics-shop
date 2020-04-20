@@ -17,9 +17,10 @@ export class AppComponent {
 	public click(event)
 	{
 		const gallery_elm = document.querySelector('#gallery')
+		console.log(gallery_elm.getBoundingClientRect().y);
 
 		window.scrollTo({
-			top: gallery_elm.getBoundingClientRect().y,
+			top: gallery_elm.getBoundingClientRect().y + window.scrollY - 50,
 			behavior: 'smooth'
 		});
 	}

@@ -29,13 +29,14 @@ app-header {
 
 app-gallery {
     padding-top: 10px;
+    border-radius: 15px;
 }
 
 app-product {
     display: inline-block;
-    max-width: 375px;
     margin: 0 50px 100px;
     border-radius: 18px;
+    border: 2px solid $color-background-secondary;
 }
 
 
@@ -48,10 +49,16 @@ app-product {
 
     app-gallery {
         margin-top: 10vw;
+        margin-bottom: 50px;
+    }
+
+    app-product {
+        margin: 0 50px 100px;
+        max-width: 300px;
     }
 }
 
-@media(max-width: 1000px) {
+@media(min-width: 601px) and (max-width: 1000px) {
     
     app-header {
         width: 95%;
@@ -62,6 +69,34 @@ app-product {
     app-gallery {
         background: rgba($color-background-secondary, 0.65);
         width: 85vw;
-        margin: 34vw auto 0;
+        margin: 34vw auto 600px;
+        padding-top: 50px;
+    }
+
+    app-product {
+        margin: 0 auto 90px;
+        display: block;
+        width: 300px;
+    }
+}
+
+@media(max-width: 600px) {
+    
+    app-header {
+        width: 95%;
+        margin: 25.5vw auto 10vw;
+        padding: 13vw 0;
+    }
+
+    app-gallery {
+        background: rgba($color-background-secondary, 0.65);
+        width: 92vw;
+        margin: 34vw auto 600px;
+    }
+
+    app-product {
+        display: block;
+        margin: 0 auto 100px;
+        width: 275px;
     }
 }

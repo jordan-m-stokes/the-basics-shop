@@ -1,0 +1,12 @@
+
+
+# general
+
+.byebug_history
+.DS_Store
+.env
+
+# front-end
+
+/node_modules/*
+/dist/*
