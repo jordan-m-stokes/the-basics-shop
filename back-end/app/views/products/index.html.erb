@@ -21,7 +21,7 @@
       <% @products.each do |product| %>
         <tr>
           <td class="td-name"><%= product.name %></td>
-          <td><%= product.format_price_u %></td>
+          <td><%= product.price %></td>
           <td class="td-description"><%= product.description %></td>
           <td><%= link_to 'View', product %></td>
           <td><%= link_to 'Edit', edit_product_path(product) %></td>
