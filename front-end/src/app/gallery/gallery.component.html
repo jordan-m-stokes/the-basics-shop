@@ -1,9 +1,9 @@
 
 <header class="header">
     <h2 class="heading">our-products</h2>
-    <h4 class="sub-heading">here-you-will-find-everything-you-could-ever-need-in-life</h4>
+    <h4 class="sub-heading">everything-you-could-ever-need</h4>
 </header>
 
 <div class="products">
-    <app-product *ngFor="let product of products" [product]="product"></app-product>
+    <app-product class="card" *ngFor="let product of products" [ready]="product === products[products.length - 1]" [product]="product"></app-product>
 </div>

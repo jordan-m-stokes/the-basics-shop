@@ -5,34 +5,55 @@ $down-to-gallery-x-scale: 2.0;
 $hover-scale: 2.3;
 
 .backing {
+    height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    text-align: center;
+    flex-flow: column;
+	color: #fff;
+}
+
+.video-container {
     left: 0;
     top: 0;
     position: absolute;
-    width: 100vw;
-    height: 58.5vw;
+    width: 100%;
+    height: 100%;
     display: block;
-    z-index: -3;
     background: #555;
-}
-
-.backing video {
-    width: 100%;
-    z-index: -2;
-}
-
-.backing-gradient {
-    left: 0;
-    top: 0;
-    width: 100%;
+    overflow: hidden;
     z-index: -1;
 }
 
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba($color-background-secondary, 0.3);
+	position: absolute;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
 .down-to-gallery {
-    display: inline-block;
+    margin-top: 105px;
     color: rgba(#fff, 0.6);
     transform: scaleX($down-to-gallery-x-scale);
     user-select: none;
     transition: transform 300ms, color 250ms;
+    z-index: 2;
 }
 
 .down-to-gallery:hover {
@@ -42,14 +63,17 @@ $hover-scale: 2.3;
 
 @media(min-width: 1001px) {
     
-    .backing-gradient {
-        background: linear-gradient(rgba($color-background, 0) 55%, rgba($color-background, 1) 55%), rgba($color-background, 0.2);
-        height: 58.5vw;
-        position: absolute;
-    }
 
     .backing video {
         filter: blur(12px);
+    }
+    
+    .video-container {
+        position: absolute;
+    }
+    
+    .video-container:after {
+        position: absolute;
     }
 
     .down-to-gallery {
@@ -58,25 +82,18 @@ $hover-scale: 2.3;
 }
 
 @media(max-width: 1000px) {
-    
-    .backing-gradient {
-        background: linear-gradient(rgba($color-background, 0) 80%, rgba($color-background, 1) 80%), rgba($color-background, 0.2);
-        height: 100vw;
-    }
 
     .backing video {
         filter: blur(6px);
     }
 
-    .backing video,
-    .backing,
-    .backing-gradient {
+    .video-container {
         position: fixed;
-        top: 0;
-        left: -15%;
-        transform: scale(1.6);
     }
-
+    
+    .video-container:after {
+        position: fixed;
+    }
     
     .down-to-gallery {
         font-size: 30px;

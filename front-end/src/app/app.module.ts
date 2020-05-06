@@ -8,14 +8,16 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
 
-import { ProductService } from './product/product.service'
+import { ProductService } from './product/product.service';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     GalleryComponent,
     HeaderComponent,
-    ProductComponent
+    ProductComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -5,46 +5,48 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
     background: $color-background;
-    margin: 0;
-}
-
-app-header,
-app-gallery {
-    display: block;
+    overflow-x: hidden;
 }
 
 app-header {
-    background: rgba(#111, 0.4);
-    padding: 4vw 0;
-    width: 40%;
+    background: rgba(#222, 0.4);
     min-width: 250px;
-    margin: 7.5vw auto 4.25vw;
+    max-width: 1000px;
+    max-height: 600px;
+    padding: 35px;
     border: 0.2vw solid rgba(#f2f2f2, 0.85);
     border-radius: 25px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 app-gallery {
     padding-top: 10px;
     border-radius: 15px;
+    display: block;
 }
 
 app-product {
     display: inline-block;
-    margin: 0 50px 100px;
-    border-radius: 18px;
-    border: 2px solid $color-background-secondary;
+    margin: 0 $product-margin ($product-margin * 2);
+    border-radius: 10px;
+    width: 275px;
 }
 
 
 @media(min-width: 1001px) {
     
     app-header {
-        width: 40%;
-        margin: 7.5vw auto 4.25vw;
+        width: 50%;
     }
 
     app-gallery {
@@ -53,50 +55,45 @@ app-product {
     }
 
     app-product {
-        margin: 0 50px 100px;
-        max-width: 300px;
+        margin: 0 $product-margin ($product-margin * 2);
     }
 }
 
 @media(min-width: 601px) and (max-width: 1000px) {
     
     app-header {
-        width: 95%;
-        margin: 25.5vw auto 10vw;
-        padding: 13vw 0;
+        width: 75vw;
+        height: 60vh;
     }
 
     app-gallery {
-        background: rgba($color-background-secondary, 0.65);
+        background: rgba($color-background-dark, 0.5);
         width: 85vw;
-        margin: 34vw auto 600px;
+        margin: 34vw auto 7.5vw;
         padding-top: 50px;
     }
 
     app-product {
-        margin: 0 auto 90px;
+        margin: 0 auto ($product-margin * 2);
         display: block;
-        width: 300px;
     }
 }
 
 @media(max-width: 600px) {
     
     app-header {
-        width: 95%;
-        margin: 25.5vw auto 10vw;
-        padding: 13vw 0;
+        width: 90vw;
+        height: 60vh;
     }
 
     app-gallery {
         background: rgba($color-background-secondary, 0.65);
         width: 92vw;
-        margin: 34vw auto 600px;
+        margin: 34vw auto 2vw;
     }
 
     app-product {
         display: block;
-        margin: 0 auto 100px;
-        width: 275px;
+        margin: 0 auto ($product-margin * 2);
     }
 }

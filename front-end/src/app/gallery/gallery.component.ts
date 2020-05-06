@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, Input } from '@angular/core';
 import { ProductService } from '../product/product.service';
 import { Product } from '../product/product.model'; 
 
@@ -10,15 +10,23 @@ import { Product } from '../product/product.model';
 })
 export class GalleryComponent implements OnInit
 {
-    products: Product[];
+	products: Product[];
 
-	constructor(private productService: ProductService) {}
+	constructor(private productService: ProductService ) {}
 
 	ngOnInit(): void
 	{
 		this.productService
             .getProducts()
-            .then(products => this.products = products);
+			.then(products => 
+			{
+				this.products = products;
+			});
 	}
 
+	@HostListener('window:resize')
+	onWindowResize()
+	{
+		this.productService.updateColumnLayout();
+	}
 }

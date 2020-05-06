@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from './product.model';
+import { ProductService } from '../product/product.service';
 
 @Component({
 	selector: 'app-product',
@@ -10,9 +11,14 @@ export class ProductComponent implements OnInit {
 
 	@Input() product: Product;
 
-	constructor() { }
+	constructor(private productService: ProductService) {}
 
-	ngOnInit(): void {
+	ngOnInit(): void {}
+
+	@Input()
+	set ready(isReady: boolean)
+	{
+		if(isReady) this.productService.updateColumnLayout();
 	}
 
 }
