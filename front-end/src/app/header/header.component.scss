@@ -1,6 +1,30 @@
 
 @import '../../styles/variables';
 
+.backing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column;
+    color: #fff;
+}
+
+.heading-backing {
+    background: rgba(#222, 0.4);
+    min-width: 250px;
+    max-width: 1000px;
+    max-height: 600px;
+    padding: 35px;
+    border: 0.2vw solid rgba(#f2f2f2, 0.85);
+    border-radius: 25px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .heading-container {
     background: rgba($color-background-secondary, 0.1);
     border-radius: 10px;
@@ -26,4 +50,88 @@ h2 {
     color: $color-text-muted;
     margin-top: 20px;
     font-size: 14px;
+}
+
+.video-container {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #555;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba($color-background-secondary, 0.3);
+	position: absolute;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+
+.down-to-gallery {
+    transform: scaleX($down-to-gallery-x-scale);
+    margin-top: 105px;
+    z-index: 2;
+}
+
+.down-to-gallery:hover {
+    transform: scale($down-to-gallery-x-scale * $hover-scale, 1.4);
+    color: rgba(#fff, 0.15);
+}
+
+@media(min-width: 1001px) {
+
+    .heading-backing {
+        width: 50vw;
+    }
+
+    .video-container video {
+        filter: blur(12px);
+    }
+    
+    .video-container {
+        position: absolute;
+    }
+    
+    .video-container:after {
+        position: absolute;
+    }
+}
+
+@media(max-width: 1000px) and (min-width: 601px) {
+
+    .heading-backing {
+        width: 75vw;
+        height: 60vh;
+    }
+
+    .video-container video {
+        filter: blur(6px);
+    }
+
+    .video-container {
+        position: fixed;
+    }
+    
+    .video-container:after {
+        position: fixed;
+    }
 }

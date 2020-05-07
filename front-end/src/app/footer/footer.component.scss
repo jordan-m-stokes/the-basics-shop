@@ -1,6 +1,44 @@
+@import '../../styles/variables';
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+.footer-container {
+    background: $color-background-secondary;
+    padding: 75px 0;
+}
 
-.social a {
-	margin: 0 5px;
+.up-to-top-container {
+    display: inline-block;
+    background: rgba($color-background-dark, 0.75);
+    padding: 20px 65px 15px;
+    border-radius: 14px;
+}
+
+.up-to-top {
+    background: rgba($color-background-dark, 0.5);
+    padding: 25px;
+    border-radius: 9px;
+    transform: scaleX($down-to-gallery-x-scale) rotate(180deg);
+}
+
+.up-to-top:hover {
+    transform: scale($down-to-gallery-x-scale * $hover-scale * 0.7, 1.25) rotate(180deg);
+    color: rgba(#fff, 0.15);
+    background-color: rgba($color-background-dark, 0.25);
+}
+
+@media(min-width: 1001px) {
+    
+    .footer-container {
+        width: 100vw;
+    }
+}
+
+@media(max-width: 1000px) {
+    
+    .footer-container {
+        margin-bottom: 70px;
+        padding: 50px 200px;
+        border-radius: 14px;
+        background: rgba($color-background, 0.65);
+    }
+
 }

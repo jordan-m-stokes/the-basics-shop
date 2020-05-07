@@ -16,17 +16,13 @@ body {
 }
 
 app-header {
-    background: rgba(#222, 0.4);
-    min-width: 250px;
-    max-width: 1000px;
-    max-height: 600px;
-    padding: 35px;
-    border: 0.2vw solid rgba(#f2f2f2, 0.85);
-    border-radius: 25px;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    text-align: center;
+    flex-flow: column;
+	color: #fff;
 }
 
 app-gallery {
@@ -42,13 +38,19 @@ app-product {
     width: 275px;
 }
 
+app-footer {
+    display: inline-block;
+}
+
+.page-router {
+    color: rgba(#fff, 0.6);
+    user-select: none;
+    transition: transform 300ms, color 250ms, background-color 250ms;
+    display: inline-block;
+}
 
 @media(min-width: 1001px) {
     
-    app-header {
-        width: 50%;
-    }
-
     app-gallery {
         margin-top: 10vw;
         margin-bottom: 50px;
@@ -57,17 +59,17 @@ app-product {
     app-product {
         margin: 0 $product-margin ($product-margin * 2);
     }
+    
+    .page-router {
+        font-size: 1.9vw;
+    }
 }
 
 @media(min-width: 601px) and (max-width: 1000px) {
     
-    app-header {
-        width: 75vw;
-        height: 60vh;
-    }
 
     app-gallery {
-        background: rgba($color-background-dark, 0.5);
+        background: rgba($color-background, 0.65);
         width: 85vw;
         margin: 34vw auto 7.5vw;
         padding-top: 50px;
@@ -76,6 +78,10 @@ app-product {
     app-product {
         margin: 0 auto ($product-margin * 2);
         display: block;
+    }
+    
+    .page-router {
+        font-size: 30px;
     }
 }
 
@@ -87,7 +93,7 @@ app-product {
     }
 
     app-gallery {
-        background: rgba($color-background-secondary, 0.65);
+        background: rgba($color-background, 0.65);
         width: 92vw;
         margin: 34vw auto 2vw;
     }
@@ -95,5 +101,9 @@ app-product {
     app-product {
         display: block;
         margin: 0 auto ($product-margin * 2);
+    }
+    
+    .page-router {
+        font-size: 30px;
     }
 }

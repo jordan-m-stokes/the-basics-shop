@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
 
 import { ProductService } from './product/product.service';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component'
     GalleryComponent,
     HeaderComponent,
     ProductComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
