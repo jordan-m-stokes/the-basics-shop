@@ -11,7 +11,7 @@
   "scripts": {
     "back-end": "bin/rails server",
     "front-end": "cd ../front-end && ng serve",
-    "all": "concurrently \"npm run back-end\" \"npm run front-end\"" 
+    "all": "concurrently \"npm run back-end\" \"npm run front-end\""
   },
   "version": "0.1.0",
   "devDependencies": {

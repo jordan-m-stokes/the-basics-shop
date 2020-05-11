@@ -83,6 +83,7 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    filter: blur(12px);
 }
 
 
@@ -102,10 +103,6 @@ h2 {
     .heading-backing {
         width: 50vw;
     }
-
-    .video-container video {
-        filter: blur(12px);
-    }
     
     .video-container {
         position: absolute;
@@ -116,15 +113,11 @@ h2 {
     }
 }
 
-@media(max-width: 1000px) and (min-width: 601px) {
+@media(max-width: 1000px) {
 
     .heading-backing {
         width: 75vw;
         height: 60vh;
-    }
-
-    .video-container video {
-        filter: blur(6px);
     }
 
     .video-container {

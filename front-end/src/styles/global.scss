@@ -87,11 +87,6 @@ app-footer {
 
 @media(max-width: 600px) {
     
-    app-header {
-        width: 90vw;
-        height: 60vh;
-    }
-
     app-gallery {
         background: rgba($color-background, 0.65);
         width: 92vw;
