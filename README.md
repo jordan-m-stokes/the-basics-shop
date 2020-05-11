@@ -13,7 +13,7 @@ There needs to be a `.env` file in the `back-end` directory. This should contain
 
 ## installing-dependencies
 
-Have Postgres, version 2.7.0 of Ruby, and Nodejs installed. Then run this on the root directory, `front-end` directory, and `back-end` directory:
+Have Postgres, version 2.7.0 of Ruby, and Nodejs installed. Then run this in the `front-end` and `back-end` directory:
 > `npm install`
 
 Then, in `back-end` directory, run this
@@ -21,7 +21,7 @@ Then, in `back-end` directory, run this
 
 ## run-servers
 
-Having postgres running, type this in root directory:
+Having postgres running, type this in `back-end` directory:
 > `npm run all`
 
 You can now access back-end server on `localhost:3000` and front-end on `localhost:4200` in your browser.
