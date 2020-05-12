@@ -2,6 +2,8 @@
 
 This was a practice project for myself, working on Ruby on Rails on the back-end and Angular on the front-end. It's a mock online-store concept where a user can purchase "basic" items on the front, and the retailer can update products and prices on the back.
 
+[video-demonstration](https://1drv.ms/v/s!AsyG9Nrxd2jvkNgOjuz3Le7UKMxTBg?e=oZf62t)
+
 ## adding-env-file
 
 There needs to be a `.env` file in the `back-end` directory. This should contain the info for the Postgres server:
